@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
-    
+
     <title>To-Do List</title>
 </head>
+
 <body>
     <div class="container py-5">
         <h1 class="text-center mb-4">TO-DO List</h1>
-        <input type="textbox" placeholder="Input To-Do request">
-        <button class="btn btn-primary">Creater</button>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
 
-        <div class="container taskList">
-            
+                    <form class="d-flex gap-2">
+                        <input type="text" class="form-control" id="task" placeholder="Zadej úkol...">
+                        <button class="btn btn-primary" id="btn">
+                            Přidat
+                        </button>
+                    </form>
+                    
+                </div>
+            </div>
         </div>
+        <section class="rowTasks">
+            <table class="kontaktni-tabulka">
+                <thead>
+                    <tr>
+                        <td> Task Managment</td>
+                    </tr>
+                </thead>
+                <tbody id="rowTasks">
+                    
+                </tbody>
+            </table>
+        </section>
+        
 
     </div>
 
     <script src="./dist/js/bootstrap.min.js"></script>
-    <script src="./dist/js/Main.js"></script>
+    <script src="./dist/js/Task.js"></script>
+    <script src="./dist/js/TaskManager.js"></script>
+    <script src="./dist/js/main.js"></script>
 </body>
+
 </html>
