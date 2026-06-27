@@ -1,8 +1,11 @@
-const rowTasks = document.getElementById("rowTasks");
+const DEV_MODE = false;
 
-//Při načtení vymaže localStorage a smaže řádky a inicializuje Spravce
 window.addEventListener("DOMContentLoaded", () => {
-    localStorage.removeItem("tasks"); 
-    rowTasks.innerHTML = "";         
-    new TaskManager(); 
+    if (DEV_MODE) console.log("DEV MODE: clearing storage");
+
+    if (DEV_MODE) {
+        localStorage.removeItem("tasks");
+    }
+
+    new TaskManager();
 });
